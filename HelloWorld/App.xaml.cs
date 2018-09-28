@@ -11,7 +11,28 @@ namespace HelloWorld
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            //ContentPage page = new ContentPage();
+            //StackLayout layout = new StackLayout();
+            //Label lbl = new Label();
+            //lbl.Text = "Welcome to Xamarin CESAR School";
+            //layout.Children.Add(lbl);
+            //page.Content = layout;
+
+
+            ContentPage mainPage = new ContentPage {
+                Content = new StackLayout {
+                    Children = {
+                        new Label {
+                            HorizontalTextAlignment = TextAlignment.Center,
+                            Text = "Welcome to Xamarin CESAR School"
+                        }
+                    },
+                    VerticalOptions = LayoutOptions.Center
+                }
+            };
+
+            this.MainPage = mainPage;
+
         }
 
         protected override void OnStart()
