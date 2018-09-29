@@ -17,6 +17,11 @@ namespace HelloWorld
             Navigation.PushAsync(new LabelPage());
         }
 
+        void BtnColors_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ColorsListPage());
+        }
+
 
         public MyPage()
         {
@@ -41,13 +46,16 @@ namespace HelloWorld
             btnLabel.Text = "Go to label page";
             btnLabel.Clicked += BtnLabel_Clicked;;
 
+            Button btnColors = new Button();
+            btnColors.Text = "Go to colors page";
+            btnColors.Clicked += BtnColors_Clicked;;
 
             Content = new StackLayout
             {
 
                 Children = {
                     new Label { Text = "Hello First", HorizontalTextAlignment = align },
-                    btn, btnLabel
+                    btn, btnLabel, btnColors
                 }
             };
         }
