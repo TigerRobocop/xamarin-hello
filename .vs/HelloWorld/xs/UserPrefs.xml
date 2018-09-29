@@ -1,11 +1,10 @@
 ﻿<Properties StartupConfiguration="{51F8087B-4A24-476A-B23E-004449D54C71}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="HelloWorld/NumberPadPage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HelloWorld/ColorsListPage.cs">
     <Files>
-      <File FileName="HelloWorld/MyPage.cs" Line="25" Column="26" />
-      <File FileName="HelloWorld/EventsPage.cs" Line="8" Column="6" />
+      <File FileName="HelloWorld/MyPage.cs" Line="23" Column="13" />
       <File FileName="HelloWorld/ColorsListPage.cs" Line="11" Column="43" />
-      <File FileName="HelloWorld/App.xaml.cs" Line="10" Column="41" />
-      <File FileName="HelloWorld/NumberPadPage.cs" Line="66" Column="69" />
+      <File FileName="HelloWorld/RowItem.xaml" Line="6" Column="1" />
+      <File FileName="HelloWorld/RowItem.xaml.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

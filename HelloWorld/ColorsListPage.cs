@@ -29,41 +29,43 @@ namespace HelloWorld
 
                     var colorValue = (Color)color.GetValue(null);
 
-                    Label lblColor = new Label
-                    {
-                        Text = color.Name,
-                        TextColor = colorValue,
-                        FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label))
-                    };
 
-                    Label lblInfo = new Label
-                    {
-                        Text = String.Format("{0:X2} - {1:X2} - {2:X2}", 
-                                             (int)colorValue.R * 255, (int)colorValue.G * 255, (int)colorValue.B * 255),
-                        FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label))
-                    };
+                    RowItem row = new RowItem { Color = color.Name };
+                    //Label lblColor = new Label
+                    //{
+                    //    Text = color.Name,
+                    //    TextColor = colorValue,
+                    //    FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label))
+                    //};
+
+                    //Label lblInfo = new Label
+                    //{
+                    //    Text = String.Format("{0:X2} - {1:X2} - {2:X2}", 
+                    //                         (int)colorValue.R * 255, (int)colorValue.G * 255, (int)colorValue.B * 255),
+                    //    FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label))
+                    //};
 
 
-                    BoxView boxColor = new BoxView { Color = colorValue };
+                    //BoxView boxColor = new BoxView { Color = colorValue };
 
 
-                    Frame frame = new Frame
-                    {
-                        Padding = 10
-                    };
+                    //Frame frame = new Frame
+                    //{
+                    //    Padding = 10
+                    //};
 
-                    StackLayout cell = new StackLayout { Orientation = StackOrientation.Horizontal };
+                    //StackLayout cell = new StackLayout { Orientation = StackOrientation.Horizontal };
 
-                    StackLayout labels = new StackLayout();
-                    labels.Children.Add(lblColor);
-                    labels.Children.Add(lblInfo);
+                    //StackLayout labels = new StackLayout();
+                    //labels.Children.Add(lblColor);
+                    //labels.Children.Add(lblInfo);
 
-                    cell.Children.Add(boxColor);
-                    cell.Children.Add(labels);
+                    //cell.Children.Add(boxColor);
+                    //cell.Children.Add(labels);
 
-                    frame.Content = cell;
+                    //frame.Content = cell;
 
-                    stackLayout.Children.Add(frame);
+                    stackLayout.Children.Add(row);
                 }
                    
 
