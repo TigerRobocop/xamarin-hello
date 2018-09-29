@@ -6,7 +6,6 @@ namespace HelloWorld
 {
     public class EventsPage : ContentPage
     {
-
         StackLayout log;
         Button btnAdd, btnRemove;
 
@@ -14,7 +13,7 @@ namespace HelloWorld
         {
             btnAdd = new Button
             {
-                Text = "Add log", ClassId = "btnAdd", 
+                Text = "Add log", ClassId = "btnAdd",
                 HorizontalOptions = LayoutOptions.CenterAndExpand
             };
 

@@ -6,28 +6,6 @@ namespace HelloWorld
 {
     public class MyPage : ContentPage
     {
-
-        void Btn_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new SecondPage());
-        }
-
-        void BtnLabel_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new LabelPage());
-        }
-
-        void BtnColors_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new ColorsListPage());
-        }
-
-        void BtnEvents_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new EventsPage());
-        }
-
-
         public MyPage()
         {
             TextAlignment align = Device.RuntimePlatform == Device.Android ? TextAlignment.Start : TextAlignment.Center;
@@ -45,19 +23,33 @@ namespace HelloWorld
 
             Button btn = new Button();
             btn.Text = "Go to next page";
-            btn.Clicked += Btn_Clicked;
+            btn.Clicked += (object sender, EventArgs e) => {
+                Navigation.PushAsync(new SecondPage());
+            };
 
             Button btnLabel = new Button();
             btnLabel.Text = "Go to label page";
-            btnLabel.Clicked += BtnLabel_Clicked;
+            btnLabel.Clicked += (object sender, EventArgs e) => {
+                Navigation.PushAsync(new LabelPage());
+            };
 
             Button btnColors = new Button();
             btnColors.Text = "Go to colors page";
-            btnColors.Clicked += BtnColors_Clicked;
+            btnColors.Clicked += (object sender, EventArgs e) => {
+                Navigation.PushAsync(new ColorsListPage());
+            };
 
             Button btnEvents = new Button();
             btnEvents.Text = "Go to Events page";
-            btnEvents.Clicked += BtnEvents_Clicked;;
+            btnEvents.Clicked += (object sender, EventArgs e) => {
+                Navigation.PushAsync(new EventsPage());
+            };
+
+            Button btnNumberPad  = new Button();
+            btnNumberPad.Text = "Go to NumberPad Page";
+            btnNumberPad.Clicked += (object sender, EventArgs e) => {
+                Navigation.PushAsync(new NumberPadPage());
+            };
 
 
             var scroll = new ScrollView();
@@ -67,7 +59,7 @@ namespace HelloWorld
 
                 Children = {
                     new Label { Text = "Hello First", HorizontalTextAlignment = align },
-                    btn, btnLabel, btnColors, btnEvents
+                    btn, btnLabel, btnColors, btnEvents, btnNumberPad
                 }
             };
 
