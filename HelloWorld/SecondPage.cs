@@ -8,6 +8,8 @@ namespace HelloWorld
     {
         public SecondPage()
         {
+            Title = "Second Page";
+
             Content = new StackLayout
             {
                 Children = {

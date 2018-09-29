@@ -12,6 +12,11 @@ namespace HelloWorld
             Navigation.PushAsync(new SecondPage());
         }
 
+        void BtnLabel_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LabelPage());
+        }
+
 
         public MyPage()
         {
@@ -25,18 +30,24 @@ namespace HelloWorld
             //        align = TextAlignment.Center;
             //        break;
             //}
-
+            // Modo defasado
             //TextAlignment align2 = Device.OnPlatform<TextAlignment>(TextAlignment.Center, TextAlignment.Start, TextAlignment.End);
 
             Button btn = new Button();
             btn.Text = "Go to next page";
             btn.Clicked += Btn_Clicked;
+
+            Button btnLabel = new Button();
+            btnLabel.Text = "Go to label page";
+            btnLabel.Clicked += BtnLabel_Clicked;;
+
+
             Content = new StackLayout
             {
 
                 Children = {
                     new Label { Text = "Hello First", HorizontalTextAlignment = align },
-                    btn
+                    btn, btnLabel
                 }
             };
         }
