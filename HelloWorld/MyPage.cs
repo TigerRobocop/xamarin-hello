@@ -22,6 +22,11 @@ namespace HelloWorld
             Navigation.PushAsync(new ColorsListPage());
         }
 
+        void BtnEvents_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new EventsPage());
+        }
+
 
         public MyPage()
         {
@@ -44,11 +49,15 @@ namespace HelloWorld
 
             Button btnLabel = new Button();
             btnLabel.Text = "Go to label page";
-            btnLabel.Clicked += BtnLabel_Clicked;;
+            btnLabel.Clicked += BtnLabel_Clicked;
 
             Button btnColors = new Button();
             btnColors.Text = "Go to colors page";
-            btnColors.Clicked += BtnColors_Clicked;;
+            btnColors.Clicked += BtnColors_Clicked;
+
+            Button btnEvents = new Button();
+            btnEvents.Text = "Go to Events page";
+            btnEvents.Clicked += BtnEvents_Clicked;;
 
 
             var scroll = new ScrollView();
@@ -58,7 +67,7 @@ namespace HelloWorld
 
                 Children = {
                     new Label { Text = "Hello First", HorizontalTextAlignment = align },
-                    btn, btnLabel, btnColors
+                    btn, btnLabel, btnColors, btnEvents
                 }
             };
 
