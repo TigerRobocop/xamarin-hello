@@ -33,7 +33,7 @@ namespace HelloWorld
             scroll.Content = stackLayout;
 
             Content = scroll;
-
+            this.Title = "Colors List Page";
         }
     }
 }

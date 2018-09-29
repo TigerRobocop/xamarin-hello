@@ -50,7 +50,10 @@ namespace HelloWorld
             btnColors.Text = "Go to colors page";
             btnColors.Clicked += BtnColors_Clicked;;
 
-            Content = new StackLayout
+
+            var scroll = new ScrollView();
+
+            var stackLayout = new StackLayout
             {
 
                 Children = {
@@ -58,6 +61,12 @@ namespace HelloWorld
                     btn, btnLabel, btnColors
                 }
             };
+
+            scroll.Content = stackLayout;
+
+            Content = scroll;
+
+            this.Title = "Main Page";
         }
     }
 }
