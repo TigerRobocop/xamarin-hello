@@ -60,6 +60,11 @@ namespace HelloWorld
                     output, keyboard
                 }
             };
+
+            var settings = Application.Current.Properties;
+            if (settings.ContainsKey(App.keypadOutput)) {
+                output.Text = settings[App.keypadOutput].ToString();
+            }
         }
 
 
@@ -71,6 +76,7 @@ namespace HelloWorld
                 output.Text = output.Text.Substring(0, output.Text.Length - 1);
             } else {
                 output.Text += btn.StyleId;
+                Application.Current.Properties[App.keypadOutput] = output.Text;
             }
         }
 

@@ -22,31 +22,31 @@ namespace HelloWorld
             //TextAlignment align2 = Device.OnPlatform<TextAlignment>(TextAlignment.Center, TextAlignment.Start, TextAlignment.End);
 
             Button btn = new Button();
-            btn.Text = "Go to next page";
+            btn.Text = "Next page";
             btn.Clicked += (object sender, EventArgs e) => {
                 Navigation.PushAsync(new SecondPage());
             };
 
             Button btnLabel = new Button();
-            btnLabel.Text = "Go to label page";
+            btnLabel.Text = "Label page";
             btnLabel.Clicked += (object sender, EventArgs e) => {
                 Navigation.PushAsync(new LabelPage());
             };
 
             Button btnColors = new Button();
-            btnColors.Text = "Go to colors page";
+            btnColors.Text = "Colors list page";
             btnColors.Clicked += (object sender, EventArgs e) => {
                 Navigation.PushAsync(new ColorsListPage());
             };
 
             Button btnEvents = new Button();
-            btnEvents.Text = "Go to Events page";
+            btnEvents.Text = "Events page";
             btnEvents.Clicked += (object sender, EventArgs e) => {
                 Navigation.PushAsync(new EventsPage());
             };
 
             Button btnNumberPad  = new Button();
-            btnNumberPad.Text = "Go to NumberPad Page";
+            btnNumberPad.Text = "NumberPad Page";
             btnNumberPad.Clicked += (object sender, EventArgs e) => {
                 Navigation.PushAsync(new NumberPadPage());
             };

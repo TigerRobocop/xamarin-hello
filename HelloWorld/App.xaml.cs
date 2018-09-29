@@ -7,6 +7,7 @@ namespace HelloWorld
 {
     public partial class App : Application
     {
+        public const string keypadOutput =  "keypadOutput";
         public App()
         {
             InitializeComponent();
