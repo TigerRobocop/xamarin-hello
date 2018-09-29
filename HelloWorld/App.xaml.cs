@@ -20,6 +20,7 @@ namespace HelloWorld
 
 
             ContentPage mainPage = new ContentPage {
+                Title = "New Page",
                 Content = new StackLayout {
                     Children = {
                         new Label {
@@ -31,7 +32,8 @@ namespace HelloWorld
                 }
             };
 
-            this.MainPage = mainPage;
+            MyPage page = new MyPage();
+            this.MainPage = new NavigationPage(page);
 
         }
 
